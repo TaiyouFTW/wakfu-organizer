@@ -1,0 +1,49 @@
+@use "@angular/material" as mat;
+
+@import "./colors.scss";
+
+$custom-palette: (
+    50: lighten($e7-primary, 25%),
+    100: lighten($e7-primary, 20%),
+    200: lighten($e7-primary, 15%),
+    300: lighten($e7-primary, 10%),
+    400: lighten($e7-primary, 5%),
+    500: $e7-primary,
+    600: darken($e7-primary, 10%),
+    700: darken($e7-primary, 15%),
+    800: darken($e7-primary, 20%),
+    900: darken($e7-primary, 25%),
+    contrast: (
+        50: $e7-text,
+        100: $e7-text,
+        200: $e7-text,
+        300: $e7-text,
+        400: $e7-text,
+        500: $e7-text,
+        600: $e7-text,
+        700: $e7-text,
+        800: $e7-text,
+        900: $e7-text,
+    ),
+);
+
+@include mat.core();
+
+$e7-primary: mat.define-palette($custom-palette);
+$e7-accent: mat.define-palette($custom-palette);
+$e7-typography: mat.define-typography-config(
+    $font-family: "inherit",
+);
+$e7-theme: mat.define-dark-theme(
+    (
+        color: (
+            primary: $e7-primary,
+            accent: $e7-accent,
+            warn: $e7-primary,
+        ),
+        typography: $e7-typography,
+    )
+);
+
+@include mat.core-theme($e7-theme);
+@include mat.all-component-themes($e7-theme);
