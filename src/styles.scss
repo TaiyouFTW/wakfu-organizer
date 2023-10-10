@@ -12,7 +12,7 @@ body {
     font-family: Roboto, "Helvetica Neue", sans-serif;
     font-size: 16px;
     background-color: $primary-dark;
-    color: $e7-text;
+    color: $wo-text;
 }
 
 h1,
@@ -21,7 +21,7 @@ h3,
 h4,
 h5,
 h6 {
-    color: $e7-text;
+    color: $wo-text;
     font-weight: bold;
 }
 
@@ -59,7 +59,7 @@ h6 {
 
 .custom-snackbar {
     .mat-mdc-snack-bar-container .mdc-snackbar__surface {
-        color: $e7-text;
+        color: $wo-text;
         background: $accent-dark;
     }
 }
@@ -79,7 +79,7 @@ h6 {
     background: #bd282d80;
 }
 .mat-accent .mat-mdc-option.mdc-list-item--selected:not(.mdc-list-item--disabled) .mdc-list-item__primary-text {
-    color: $e7-text;
+    color: $wo-text;
     font-weight: bold;
 }
 
